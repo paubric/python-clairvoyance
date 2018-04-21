@@ -1,7 +1,7 @@
 import Algorithmia
 import pprint
 
-algorithmia_key = 'simUTMULmOWj/OpAO9AUMXk+sFX1'
+algorithmia_key = 'YOUR_KEY_HERE'
 
 def string_to_len(graph, nodes):
     print('Performing transform string_to_len on nodes: ', nodes)
