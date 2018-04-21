@@ -1,15 +1,15 @@
 # Clairvoyance
-Modular microframework which performs some basic data mining by generating directed graphs through a number of transforms. It works mostly by leveraging the power of third-party public APIs.
+Modular microframework which performs some basic data mining operations by generating directed graphs through a number of transforms. It works mostly by leveraging the power of third-party public APIs.
 
 ## Background
 An open API (often referred to as a public API) is a publicly available application programming interface that provides developers with programmatic access to a proprietary software application or web service. Combining free public APIs from **data processing** services like Algorithmia, **social networks** like Twitter, **geolocators** like Google etc. results in a useful swiss army knife for data mining.
 
 ## Usage
-After you import the `clairvoyance.core` and a transform package, you can create an instance of a graph and perform operations with it. Let's create an instance.
+After you import the `clairvoyance.core` and transform packages, you can create an instance of a graph and perform operations with it. Let's create an instance.
 ```
 G = core.Graph()
 ```
-Let's add a node in the graph, an entity called `Jane` entity of type `string`.
+Let's add a node in the graph, an entity called `Jane` of type `string`.
 ```
 G.add_entity('Jane', 'string')
 ```
@@ -31,7 +31,7 @@ Now the graph should contain another node, which is connected with the initial n
 A transform has the following structure and it can be easily integrated: 
 ```
 def intype_to_outtype(graph, nodes):
-    print('Performing transform string_to_len on nodes: ', nodes)
+    print('Performing transform intype_to_outtype on nodes: ', nodes)
 
     input_type = 'intype'
     output_type = 'outtype'
@@ -49,6 +49,7 @@ def intype_to_outtype(graph, nodes):
 
 ## TODO
 - code refactoring
+- rethink entity types (primitive types (e.g. float), specific subtypes(e.g. temperature))
 - implement one-to-many node transforms
 - more nlp_transforms: entity recognition, translation, identify language etc.
 - social transforms: get tweets containing term, get last tweets of user etc.
