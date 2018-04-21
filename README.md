@@ -25,7 +25,7 @@ Now the graph should contain another node, which is connected with the initial n
 - **nlp_transforms.string_to_len** - Get length of string
 - **nlp_transforms.string_to_word_count** - Get number of words from strings
 - **nlp_transforms.string_to_gender** - Get gender of name
-- **nlp_transforms.string_to_tags** - Get relevant tags from text
+- **nlp_transforms.string_to_tags** - Get relevant tags from text (TO DO implement one-to-many)
 - **nlp_transforms.string_to_summary** - Get summarized version of text
 
 A transform has the following structure and it can be easily integrated: 
