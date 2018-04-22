@@ -49,6 +49,7 @@ def intype_to_outtype(graph, nodes):
 
 ## TODO
 - code refactoring
+- add edge labels (generated transform name)
 - <s>rethink entity types (primitive types (e.g. float), specific subtypes(e.g. temperature))</s>
 - <s>implement one-to-many node transforms</s>
 - more transforms:
