@@ -1,17 +1,17 @@
 import Algorithmia
-import pprint
+from . import entity_types
 
-algorithmia_key = 'YOUR_KEY_HERE'
+algorithmia_key = 'simUTMULmOWj/OpAO9AUMXk+sFX1'
 
 def string_to_len(graph, nodes):
     print('Performing transform string_to_len on nodes: ', nodes)
 
-    input_type = 'string'
-    output_type = 'integer'
+    input_type = entity_types.string_type()
+    output_type = entity_types.integer_type()
     transform_results = []
 
     for node in nodes:
-        if (graph.nodes[node]['type'] == input_type):
+        if (graph.nodes[node]['type'][0] == input_type[0]):
             transform_results.append(len(node))
         else:
             print('Incompatible types')
@@ -22,12 +22,12 @@ def string_to_len(graph, nodes):
 def string_to_word_count(graph, nodes):
     print('Performing transform string_to_word_count on nodes: ', nodes)
 
-    input_type = 'string'
-    output_type = 'integer'
+    input_type = entity_types.string_type()
+    output_type = entity_types.integer_type()
     transform_results = []
 
     for node in nodes:
-        if (graph.nodes[node]['type'] == input_type):
+        if (graph.nodes[node]['type'][0] == input_type[0]):
             transform_results.append(len(node.split()))
         else:
             print('Incompatible types')
@@ -38,8 +38,8 @@ def string_to_word_count(graph, nodes):
 def string_to_gender(graph, nodes):
     print('Performing transform string_to_gender on nodes: ', nodes)
 
-    input_type = 'string'
-    output_type = 'string'
+    input_type = entity_types.name_type()
+    output_type = entity_types.string_type()
     transform_results = []
 
     for node in nodes:
@@ -57,12 +57,12 @@ def string_to_gender(graph, nodes):
 def string_to_summary(graph, nodes):
     print('Performing transform string_to_summary on nodes: ', nodes)
 
-    input_type = 'string'
-    output_type = 'string'
+    input_type = entity_types.string_type()
+    output_type = entity_types.string_type()
     transform_results = []
 
     for node in nodes:
-        if (graph.nodes[node]['type'] == input_type):
+        if (graph.nodes[node]['type'][0] == input_type[0]):
             client = Algorithmia.client(algorithmia_key)
             algo = client.algo('nlp/Summarizer/0.1.7')
             result = algo.pipe(node)
@@ -76,16 +76,16 @@ def string_to_summary(graph, nodes):
 def string_to_tags(graph, nodes):
     print('Performing transform string_to_tags on nodes: ', nodes)
 
-    input_type = 'string'
-    output_type = 'string'
+    input_type = entity_types.string_type()
+    output_type = entity_types.string_type()
     transform_results = []
 
     for node in nodes:
-        if (graph.nodes[node]['type'] == input_type):
+        if (graph.nodes[node]['type'][0] == input_type[0]):
             client = Algorithmia.client(algorithmia_key)
             algo = client.algo('nlp/AutoTag/1.0.1')
             result = algo.pipe(node)
-            transform_results.append(' '.join(result.result))
+            transform_results.append(result.result)
         else:
             print('Incompatible types')
             return (-1, -1)
@@ -95,12 +95,12 @@ def string_to_tags(graph, nodes):
 def string_to_sentiment(graph, nodes):
     print('Performing transform string_to_sentiment on nodes: ', nodes)
 
-    input_type = 'string'
-    output_type = 'number'
+    input_type = entity_types.string_type()
+    output_type = entity_types.float_type()
     transform_results = []
 
     for node in nodes:
-        if (graph.nodes[node]['type'] == input_type):
+        if (graph.nodes[node]['type'][0] == input_type[0]):
             client = Algorithmia.client(algorithmia_key)
             algo = client.algo('nlp/SentimentAnalysis/1.0.4')
             result = algo.pipe({'document':node})
