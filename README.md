@@ -53,7 +53,7 @@ def intype_to_outtype(graph, nodes):
 - implement one-to-many node transforms
 - more transforms:
     - natural language processing
-        - ---string_to_len---
+        - <s>string_to_len</s>
         - string_to_word_count
         - string_to_gender
         - string_to_summary
