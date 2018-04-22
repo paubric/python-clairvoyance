@@ -5,13 +5,13 @@ Modular microframework which performs some basic data mining operations by gener
 An open API (often referred to as a public API) is a publicly available application programming interface that provides developers with programmatic access to a proprietary software application or web service. Combining free public APIs from **data processing** services like Algorithmia, **social networks** like Twitter, **geolocators** like Google etc. results in a useful swiss army knife for data mining.
 
 ## Usage
-After you import the `clairvoyance.core` and transform packages, you can create an instance of a graph and perform operations with it. Let's create an instance.
+After you import the `clairvoyance.core`, `clairvoyance.entity_types` and transform packages, you can create an instance of a graph and perform operations with it. Let's create an instance.
 ```
 G = core.Graph()
 ```
 Let's add a node in the graph, an entity called `Jane` of type `string`.
 ```
-G.add_entity('Jane', 'string')
+G.add_entity('Jane', entity_types.name_type())
 ```
 Now let's perform a `string_to_gender` transform.
 ```
@@ -25,7 +25,7 @@ Now the graph should contain another node, which is connected with the initial n
 - **nlp_transforms.string_to_len** - Get length of string
 - **nlp_transforms.string_to_word_count** - Get number of words from strings
 - **nlp_transforms.string_to_gender** - Get gender of name
-- **nlp_transforms.string_to_tags** - Get relevant tags from text (TO DO implement one-to-many)
+- **nlp_transforms.string_to_tags** - Get relevant tags from text <s>(TO DO implement one-to-many)</s>
 - **nlp_transforms.string_to_summary** - Get summarized version of text
 
 A transform has the following structure and it can be easily integrated: 
