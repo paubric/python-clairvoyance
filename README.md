@@ -46,7 +46,22 @@ def intype_to_outtype(graph, nodes):
 
     return transform_results, output_type
 ```
+## Entity Types
+### Available Entity Types
+- **string_type**
+    - **lang_type**
+    - **name_type**
+    - **domain_type**
+    - **ip_type**
+    - **country_type**
+- **integer_type**
+- **float_type**
 
+An entity type has the following structure and it can be easily integrated: 
+```
+def entity_type():
+    return ['primitive type', 'specific subtype']
+```
 ## TODO
 - code refactoring
 - add edge labels (generated transform name)
