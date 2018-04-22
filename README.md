@@ -51,7 +51,17 @@ def intype_to_outtype(graph, nodes):
 - code refactoring
 - rethink entity types (primitive types (e.g. float), specific subtypes(e.g. temperature))
 - implement one-to-many node transforms
-- more nlp_transforms: entity recognition, translation, identify language etc.
-- social transforms: get tweets containing term, get last tweets of user etc.
-- other transforms: geolocation, ip/domain lookup, dns records, face api etc.
+- more transforms:
+    - natural language processing
+        - entity recognition
+        - translation, 
+        - identify language
+    - social transforms:
+        - get tweets containing term
+        - get last tweets of user
+    - other: 
+        - geolocation
+        - ip/domain lookup
+        - dns records
+        - face api
 - improve(implement) visualization
