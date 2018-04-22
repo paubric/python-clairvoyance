@@ -71,7 +71,7 @@ def intype_to_outtype(graph, nodes):
         - string_to_tweets
         - user_to_tweets
     - other: 
-        - coordinates_to_location
-        - ip_to_domain
-        - domain_to_ip
+        - <s>ip_to_location</s>
+        - <s>ip_to_domain</s>
+        - <s>domain_to_ip</s>
 - improve(implement) visualization
