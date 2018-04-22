@@ -54,19 +54,23 @@ def intype_to_outtype(graph, nodes):
 - more transforms:
     - natural language processing
         - <s>string_to_len</s>
-        - string_to_word_count
-        - string_to_gender
-        - string_to_summary
-        - string_to_tags
-        - entity recognition
-        - translation, 
-        - identify language
+        - <s>string_to_word_count</s>
+        - <s>string_to_gender</s>
+        - <s>string_to_summary</s>
+        - <s>string_to_tags</s>
+        - string_to_named_entities
+        - string_to_translated, 
+        - string_to_language
+    - computer vision
+        - image_to_faces
+        - image_to_sentiment
+        - image_to_tags
+        - image_to_objects
     - social transforms:
-        - get tweets containing term
-        - get last tweets of user
+        - string_to_tweets
+        - user_to_tweets
     - other: 
-        - geolocation
-        - ip/domain lookup
-        - dns records
-        - face api
+        - coordinates_to_location
+        - ip_to_domain
+        - domain_to_ip
 - improve(implement) visualization
