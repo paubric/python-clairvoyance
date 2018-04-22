@@ -49,8 +49,8 @@ def intype_to_outtype(graph, nodes):
 
 ## TODO
 - code refactoring
-- rethink entity types (primitive types (e.g. float), specific subtypes(e.g. temperature))
-- implement one-to-many node transforms
+- <s>rethink entity types (primitive types (e.g. float), specific subtypes(e.g. temperature))</s>
+- <s>implement one-to-many node transforms</s>
 - more transforms:
     - natural language processing
         - <s>string_to_len</s>
