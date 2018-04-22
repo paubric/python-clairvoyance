@@ -53,6 +53,11 @@ def intype_to_outtype(graph, nodes):
 - implement one-to-many node transforms
 - more transforms:
     - natural language processing
+        - ---string_to_len---
+        - string_to_word_count
+        - string_to_gender
+        - string_to_summary
+        - string_to_tags
         - entity recognition
         - translation, 
         - identify language
