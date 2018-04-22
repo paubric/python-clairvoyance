@@ -135,7 +135,7 @@ def string_to_language(graph, nodes):
     print('Performing transform string_to_language on nodes: ', nodes)
 
     input_type = entity_types.string_type()
-    output_type = entity_types.string_type()
+    output_type = entity_types.lang_type()
     transform_results = []
 
     for node in nodes:
