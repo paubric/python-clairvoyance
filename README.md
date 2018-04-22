@@ -59,9 +59,9 @@ def intype_to_outtype(graph, nodes):
         - <s>string_to_gender</s>
         - <s>string_to_summary</s>
         - <s>string_to_tags</s>
-        - string_to_named_entities
+        - <s>string_to_named_entities</s>
         - string_to_translated
-        - string_to_language
+        - <s>string_to_language</s>
     - computer vision
         - image_to_faces
         - image_to_sentiment
