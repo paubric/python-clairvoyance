@@ -33,8 +33,8 @@ A transform has the following structure and it can be easily integrated:
 def intype_to_outtype(graph, nodes):
     print('Performing transform intype_to_outtype on nodes: ', nodes)
 
-    input_type = 'intype'
-    output_type = 'outtype'
+    input_type = entity_types.intype()
+    output_type = entity_types.outtype()
     transform_results = []
 
     for node in nodes:
