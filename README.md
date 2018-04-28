@@ -27,6 +27,11 @@ Now the graph should contain another node, which is connected with the initial n
 - **nlp_transforms.string_to_gender** - Get gender of name
 - **nlp_transforms.string_to_tags** - Get relevant tags from text <s>(TO DO implement one-to-many)</s>
 - **nlp_transforms.string_to_summary** - Get summarized version of text
+- **nlp_transforms.string_to_named_entities** - Get named entities from text
+- **nlp_transforms.string_to_languages** - Get language of text
+- **net_transforms.ip_to_domain** - Get dns domain from ip address
+- **net_transforms.ip_to_location** - Get country from ip address
+- **net_transforms.domain_to_ip** - Get ip address from dns domain
 
 A transform has the following structure and it can be easily integrated: 
 ```
@@ -85,7 +90,7 @@ def entity_type():
     - social transforms:
         - string_to_tweets
         - user_to_tweets
-    - other: 
+    - network: 
         - <s>ip_to_location</s>
         - <s>ip_to_domain</s>
         - <s>domain_to_ip</s>
